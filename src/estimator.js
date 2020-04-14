@@ -1,4 +1,11 @@
 const covid19ImpactEstimator = (data) => {
+    const input = data;
+    return {
+        data: input,
+        impact: {},
+        severeImpact:{}
+
+    };
 
     let getFactor;
     if (data.periodType === 'days') {
