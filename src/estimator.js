@@ -10,6 +10,11 @@ const covid19ImpactEstimator = (data) => {
    } else  {
        days = data.timeToElapse * 30; 
     };
+    return {
+        data: input,
+        impact:{},
+        severeImpact: {}
+    }; 
    };
 
 
@@ -24,10 +29,6 @@ const covid19ImpactEstimator = (data) => {
        severeImpact.currentlyInfected * 2 ** value
    );
 
-   return {
-       data: input,
-       impact:{},
-       severeImpact: {}
-   }; 
+  
 
 export default covid19ImpactEstimator;
